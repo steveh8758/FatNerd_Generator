@@ -7,3 +7,6 @@
 
 ### 輸出
 ![alt text](https://i.imgur.com/KQ7pqho.jpeg)
+
+
+Dictionary來源: https://teddy21019.github.io/weeb-message/
