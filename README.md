@@ -10,4 +10,4 @@
 
 代碼自取
 
-Dictionary來源: https://teddy21019.github.io/weeb-message/
+部分 Dictionary 來源: https://teddy21019.github.io/weeb-message/
