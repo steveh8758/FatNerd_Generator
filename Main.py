@@ -1,0 +1,66 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Sep 16 22:38:01 2021
+
+@author: Steven
+"""
+
+from random import randint as r, choices as c
+from os import system as cmd
+
+
+greasy_end = {
+    ' wwwwwwww':  1,
+    ' (笑':       1,
+    ' (燦笑':     1,
+    ' (推眼鏡':   1,
+    ' (摸摸頭':   1,
+    ' (茶':       1,
+    ' (歪頭':     1,
+    ' (汗顏':     1,
+    ' (噗哧':     1,
+    ' (嘿嘿':     1,
+    ' (喂！':     1,
+    ' (遠望':     1,
+    ' (乖乖':     1
+    }
+
+greasy_front = {
+    '嘛':        1,
+    '阿咧阿咧':  1,
+    '欸都':      1,
+    '摁姆..':    1
+    }
+
+def main():
+    # input nerd msg
+    shit = int(input("噁心指數(請輸入1~9): "))
+    msg = ""
+    _str = input("\n\n> 輸入要轉換的文章\n  有分行的文章請直接貼上\n  (輸入'q'結束輸入))\n: ")
+    while _str != 'q':
+        msg = msg + _str + "\n"
+        _str = input()
+    # split to list
+    msg = msg.split("\n")[0:-1]
+    # merge
+    output = []
+    for i in msg:
+        if i == '':
+            continue
+        if r(0, 11-shit) == 0:
+            i = c(list(greasy_front.keys()), weights = tuple(greasy_front.values()), k = 1)[0] + i
+        if r(0, 9) <= shit:
+            i = i + c(list(greasy_end.keys()), weights = tuple(greasy_end.values()), k = 1)[0]
+        output.append(i + "\n")
+    # clean screen
+    try:
+        cmd("clear")
+    except:
+        cmd("cls")
+    # print result
+    [print(i, end = "") for i in output]
+
+if __name__ == '__main__':
+    main()
+else:
+    exit
