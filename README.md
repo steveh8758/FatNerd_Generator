@@ -1,6 +1,6 @@
 # FatNerd_Generator
 
-## [線上執行](https://replit.com/@steveh8758/FatNerdgenerator#main.py6)
+## [線上執行](https://replit.com/@steveh8758/FatNerdgenerator#main.py)
 
 ## 輸入
 ![alt text](https://i.imgur.com/Bm055mO.jpeg)
