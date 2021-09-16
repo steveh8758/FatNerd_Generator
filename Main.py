@@ -6,14 +6,15 @@
 
 from random import randint as r, choices as c
 from os import system as cmd
+import re
 
 # 更改後面數字，可以使該則訊息更常出現
 greasy_end = {
-    ' wwwwwwww':  3,
+    ' wwwwwwww':  2,
     ' (笑':       1,
     ' (燦笑':     1,
-    ' (推眼鏡':   1,
-    ' (摸摸頭':   5,
+    ' (推眼鏡':   2,
+    ' (摸摸頭':   1,
     ' (茶':       1,
     ' (歪頭':     1,
     ' (汗顏':     1,
@@ -36,9 +37,9 @@ greasy_chaos = {
     ' (射精': 1,
     ' (勃起': 2,
     ' (捶牆壁': 1,
-    ' (撕心裂肺地笑著': 3,
+    ' (撕心裂肺地笑著': 1,
     ' (憤怒': 1,
-    ' (憤怒槌牆': 1,
+    ' (憤怒槌牆': 2,
     ' (深深恨著自己': 1
     }
 
@@ -56,7 +57,7 @@ def main():
         msg = msg + _str + "\n"
         _str = input()
     # split to list
-    msg = msg.split("\n")[0:-1]
+    msg = re.split('，|。|！|\n|!|;|\?|；', str(msg))
     # merge
     output = []
     for i in msg:
