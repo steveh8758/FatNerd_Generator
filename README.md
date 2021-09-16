@@ -3,7 +3,7 @@
 
 
 ### 輸入
-https://i.imgur.com/Bm055mO.jpeg
+![alt text](https://i.imgur.com/Bm055mO.jpeg)
 
 ### 輸出
 https://i.imgur.com/KQ7pqho.jpeg
