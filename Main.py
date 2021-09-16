@@ -57,7 +57,7 @@ def main():
         msg = msg + _str + "\n"
         _str = input()
     # split to list
-    msg = re.split('，|。|！|\n|!|;|\?|；', str(msg))
+    msg = re.split('，|。|！|\n|!|;|\?|；|？', str(msg))
     # merge
     output = []
     for i in msg:
