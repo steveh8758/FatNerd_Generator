@@ -54,7 +54,7 @@ def main():
         global greasy_end
         greasy_end = {**greasy_end, **greasy_chaos}
     msg = ""
-    _str = input("\n\n> 輸入要轉換的文章\n  有分行的文章請直接貼上\n  (輸入'q'結束輸入))\n: ")
+    _str = input("\n\n  輸入要轉換的文章\n  有分行的文章請直接貼上\n  (輸入'q'結束輸入))\n> ")
     while _str != 'q':
         msg = msg + _str + "\n"
         _str = input()
