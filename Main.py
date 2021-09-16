@@ -5,7 +5,7 @@
 # =============================================================================
 
 from random import randint as r, choices as c
-from os import system as cmd
+from os import system as cmd, name as sys_name
 import re
 
 # 更改後面數字，可以使該則訊息更常出現
@@ -43,6 +43,8 @@ greasy_chaos = {
     ' (深深恨著自己': 1
     }
 
+def _cls():
+    cmd('cls' if sys_name == 'nt' else 'clear')
 
 def main():
     # input nerd msg
@@ -69,14 +71,14 @@ def main():
             i = i + c(list(greasy_end.keys()), weights = tuple(greasy_end.values()), k = 1)[0]
         output.append(i + "\n")
     # clean screen
-    try:
-        cmd("clear")
-    except:
-        cmd("cls")
+    _cls()
     # print result
     [print(i, end = "") for i in output]
 
 if __name__ == '__main__':
-    main()
+    while True:
+        main()
+        if input("輸入\'cls\'清除螢幕! : ") == "cls":
+            _cls()
 else:
     exit
