@@ -1,16 +1,15 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Sep 16 22:38:01 2021
-
-@author: Steven
-"""
+# =============================================================================
+# 歡迎大家一起加入肥宅的行列
+# 有人像折木奉太郎嗎 ?
+# =============================================================================
 
 from random import randint as r, choices as c
 from os import system as cmd
 
-
+# 更改後面數字，可以使該則訊息更常出現
 greasy_end = {
-    ' wwwwwwww':  1,
+    ' wwwwwwww':  3,
     ' (笑':       1,
     ' (燦笑':     1,
     ' (推眼鏡':   1,
@@ -31,6 +30,7 @@ greasy_front = {
     '欸都':      1,
     '摁姆..':    1
     }
+
 
 def main():
     # input nerd msg
