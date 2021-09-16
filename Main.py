@@ -78,7 +78,7 @@ def main():
 if __name__ == '__main__':
     while True:
         main()
-        if input("輸入\'cls\'清除螢幕! : ") == "cls":
+        if input("\n\n輸入\'cls\'清除螢幕! : ") == "cls":
             _cls()
 else:
     exit
