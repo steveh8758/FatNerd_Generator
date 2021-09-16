@@ -46,7 +46,7 @@ greasy_chaos = {
 def main():
     # input nerd msg
     shit = int(input("噁心指數(請輸入1~9): "))
-    if shit >= 7:
+    if shit >= 8:
         print("\n爻 已x黑x化 爻")
         global greasy_end
         greasy_end = {**greasy_end, **greasy_chaos}
@@ -62,7 +62,7 @@ def main():
     for i in msg:
         if i == '':
             continue
-        if r(0, 11-shit) == 0:
+        if r(0, 9-shit) == 0:
             i = c(list(greasy_front.keys()), weights = tuple(greasy_front.values()), k = 1)[0] + i
         if r(0, 9) <= shit:
             i = i + c(list(greasy_end.keys()), weights = tuple(greasy_end.values()), k = 1)[0]
